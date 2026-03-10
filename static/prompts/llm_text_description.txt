@@ -1,0 +1,11 @@
+The parking_lot is on the east of Netto.
+
+The pedestrian_sidewalk is on the north of Netto.
+
+The pedestrian_sidewalk is on the north of the parking_lot.
+
+The road is on the north of the pedestrian_sidewalk.
+
+The roadside_parking_lot is on the north of the road.
+
+The cemetery is on the north of the roadside_parking_lot.

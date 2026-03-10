@@ -1,0 +1,5 @@
+Could you describe the scene using six static objects and their spatial relationships?
+Use only the directions north, south, east, and west to express these relations.
+The image is a 360-degree panorama, meaning the left and right edges of the image are connected behind you.
+You are looking toward the center of the image, which corresponds to the "--Placeholder for the direction (north, south, east, west)--" direction.
+If you are uncertain about the orientation, you can refer to the OSM image, which is aligned with north at the top, south at the bottom, west on the left, and east on the right.

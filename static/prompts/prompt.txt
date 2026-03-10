@@ -1,0 +1,11 @@
+Could you convert the following sentences:
+
+"--Placeholder for the user-generated text description--"
+
+into the format:
+"The [object1] is on the [direction] of the [object2]"
+For example: "The building is on the west of the car_parking".
+
+In this format, both object1 and object2 should refer to individual, distinct objects, not combinations or groups of objects.
+Also, if an object name consists of multiple words, please connect them with underscores (e.g., "car_parking" instead of "car parking").
+Please exclude any sentence that describes the spatial relation between the observer and an object.
