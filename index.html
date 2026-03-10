@@ -72,13 +72,6 @@
       margin: 0 auto;
     }
 
-    .medium-figure {
-      width: 92%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
     .table-figure {
       width: 88%;
       height: auto;
@@ -97,6 +90,40 @@
     .section-title-tight {
       margin-bottom: 1rem !important;
     }
+
+    .left-title {
+      text-align: left !important;
+    }
+
+    .big-section-title {
+      font-size: 2.2rem !important;
+      margin-bottom: 1.25rem !important;
+      text-align: left !important;
+    }
+
+    .w-70 {
+      width: 70% !important;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .w-72 {
+      width: 72% !important;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .w-75 {
+      width: 75% !important;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .w-85 {
+      width: 85% !important;
+      margin: 0 auto;
+      display: block;
+    }
   </style>
 </head>
 
@@ -113,12 +140,6 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">Anonymous Authors</span>
-          </div>
-
-          <div class="is-size-6 publication-authors">
-            <span class="author-block">
-              <small><br>Anonymous Submission</small>
-            </span>
           </div>
 
           <div class="custom-button-row">
@@ -157,7 +178,6 @@
   </div>
 </section>
 
-<!-- Teaser Video -->
 <section class="hero teaser section-very-compact">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -168,7 +188,6 @@
   </div>
 </section>
 
-<!-- Abstract -->
 <section class="section hero section-compact">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -193,51 +212,48 @@
   </div>
 </section>
 
-<!-- Problem Scenario -->
 <section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered section-title-tight">Problem Scenario</h2>
-      <img src="static/figs/scenario.png" alt="Problem scenario figure" class="main-figure">
+      <h2 class="title is-4 left-title section-title-tight">Problem Scenario</h2>
+      <img src="static/figs/scenario.png" alt="Problem scenario figure" class="main-figure w-70">
     </div>
   </div>
 </section>
 
-<!-- Related Works Table -->
 <section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered section-title-tight">Related Works</h2>
-      <img src="static/figs/table1.png" alt="Related works table" class="table-figure">
+      <h2 class="title is-4 left-title section-title-tight">Related Works</h2>
+      <img src="static/figs/table1.png" alt="Related works table" class="table-figure w-70">
       <p class="figure-caption">Comparison of world model OCL approaches.</p>
     </div>
   </div>
 </section>
 
-<!-- Framework -->
 <section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered section-title-tight">Framework Overview</h2>
+      <h2 class="title big-section-title">Methods</h2>
+      <h2 class="title is-4 left-title section-title-tight">Framework Overview</h2>
       <img src="static/figs/SPREAD_framework.png" alt="SPREAD framework" class="main-figure">
     </div>
   </div>
 </section>
 
-<!-- Ensemble + Expert Selection -->
 <section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-half">
         <div class="content">
-          <h2 class="title is-4 has-text-centered section-title-tight">Online-LoRA Ensemble</h2>
-          <img src="static/figs/lora_ensemble.png" alt="Online-LoRA ensemble" class="main-figure">
+          <h2 class="title is-4 left-title section-title-tight">Online-LoRA Ensemble</h2>
+          <img src="static/figs/lora_ensemble.png" alt="Online-LoRA ensemble" class="main-figure w-70">
         </div>
       </div>
 
       <div class="column is-half">
         <div class="content">
-          <h2 class="title is-4 has-text-centered section-title-tight">Expert Selection</h2>
+          <h2 class="title is-4 left-title section-title-tight">Expert Selection</h2>
           <img src="static/figs/expert_selection.png" alt="Expert selection" class="main-figure">
         </div>
       </div>
@@ -245,13 +261,12 @@
   </div>
 </section>
 
-<!-- Environment Variations -->
 <section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered section-title-tight">Environment Variations</h2>
+      <h2 class="title is-4 left-title section-title-tight">Environment Variations</h2>
 
-      <div class="columns is-multiline is-centered env-grid">
+      <div class="columns is-multiline is-centered env-grid w-70">
         <div class="column is-3 has-text-centered">
           <img src="static/figs/default.png" alt="Pre-training environment" class="main-figure">
           <p class="subtitle is-6 mt-2">Granular: Pre-training Env</p>
@@ -290,12 +305,11 @@
   </div>
 </section>
 
-<!-- CD Examples -->
 <section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered section-title-tight">Granular Chamfer Distance Examples</h2>
-      <div class="columns is-multiline is-centered">
+      <h2 class="title is-4 left-title section-title-tight">Granular Chamfer Distance Examples</h2>
+      <div class="columns is-multiline is-centered w-70">
         <div class="column is-3 has-text-centered">
           <img src="static/figs/default.png" alt="Image goal" class="main-figure">
           <p class="subtitle is-6 mt-2">Image Goal</p>
@@ -317,54 +331,57 @@
   </div>
 </section>
 
-<!-- Online Adaptation Results -->
 <section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered section-title-tight">Online Adaptation Results</h2>
+      <h2 class="title big-section-title">Experiments</h2>
       <div class="columns is-centered">
         <div class="column is-half">
-          <img src="static/figs/granular_cd_plot.png" alt="Granular CD plot" class="main-figure">
-          <p class="small-note">Granular Environment Chamfer Distance</p>
+          <div class="content">
+            <h2 class="title is-4 left-title section-title-tight">Online Adaptation Results</h2>
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <img src="static/figs/granular_cd_plot.png" alt="Granular CD plot" class="main-figure">
+                <p class="small-note">Granular Environment Chamfer Distance</p>
+              </div>
+              <div class="column is-half">
+                <img src="static/figs/pusht_success_plot.png" alt="PushT success plot" class="main-figure">
+                <p class="small-note">PushT Environment Success Rate</p>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="column is-half">
-          <img src="static/figs/pusht_success_plot.png" alt="PushT success plot" class="main-figure">
-          <p class="small-note">PushT Environment Success Rate</p>
+          <div class="content">
+            <h2 class="title is-4 left-title section-title-tight">Online Adaptation Results</h2>
+            <img src="static/figs/table2.png" alt="Online adaptation performance table" class="table-figure w-85">
+            <p class="figure-caption">Performance under granular environment shifts.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Online Adaptation Table -->
 <section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
-    <div class="content">
-      <h2 class="title is-3 has-text-centered section-title-tight">Online Adaptation Performance</h2>
-      <img src="static/figs/table2.png" alt="Online adaptation performance table" class="table-figure">
-      <p class="figure-caption">Performance under granular environment shifts.</p>
-    </div>
-  </div>
-</section>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="content">
+          <h2 class="title is-4 left-title section-title-tight">Online Continual Adaptation Results</h2>
+          <img src="static/figs/table3.png" alt="Online continual adaptation performance table" class="table-figure w-85">
+          <p class="figure-caption">Continual adaptation performance and online feasibility.</p>
+        </div>
+      </div>
 
-<!-- Online Continual Adaptation Table -->
-<section class="section hero is-small section-compact">
-  <div class="container is-max-desktop">
-    <div class="content">
-      <h2 class="title is-3 has-text-centered section-title-tight">Online Continual Adaptation Performance</h2>
-      <img src="static/figs/table3.png" alt="Online continual adaptation performance table" class="table-figure">
-      <p class="figure-caption">Continual adaptation performance and online feasibility.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Ablation Table -->
-<section class="section hero is-small section-compact">
-  <div class="container is-max-desktop">
-    <div class="content">
-      <h2 class="title is-3 has-text-centered section-title-tight">Ablation Study</h2>
-      <img src="static/figs/table4.png" alt="Ablation study table" class="table-figure">
-      <p class="figure-caption">Ablation on loss-plateau freezing and expert selection.</p>
+      <div class="column is-half">
+        <div class="content">
+          <h2 class="title is-4 left-title section-title-tight">Ablation Study</h2>
+          <img src="static/figs/table4.png" alt="Ablation study table" class="table-figure w-85">
+          <p class="figure-caption">Ablation on loss-plateau freezing and expert selection.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
