@@ -2,35 +2,25 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>GOTPR: General Outdoor Text-based Place Recognition Using Scene Graph Retrieval with OpenStreetMap</title>
-  <meta name="description" content="Project page for GOTPR: General Outdoor Text-based Place Recognition Using Scene Graph Retrieval with OpenStreetMap">
+  <title>SPREAD: Scalable Pre-trained World Model for Adaptive Dynamics Model</title>
+  <meta name="description" content="Project page for SPREAD: Scalable Pre-trained World Model for Adaptive Dynamics Model">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="GOTPR: General Outdoor Text-based Place Recognition Using Scene Graph Retrieval with OpenStreetMap"/>
-  <meta property="og:description" content="GOTPR: General Outdoor Text-based Place Recognition Using Scene Graph Retrieval with OpenStreetMap"/>
-  <meta property="og:url" content="https://donghwijung.github.io/GOTPR/"/>
-  <!-- <meta property="og:image" content="static/images/concept.jpg" /> -->
-  <!-- <meta property="og:image:width" content="3852"/>
-  <meta property="og:image:height" content="981"/> -->
-
-  <meta name="twitter:title" content="GOTPR: General Outdoor Text-based Place Recognition Using Scene Graph Retrieval with OpenStreetMap">
-  <meta name="twitter:description" content="Project page for GOTPR: General Outdoor Text-based Place Recognition Using Scene Graph Retrieval with OpenStreetMap">
-  <!-- <meta name="twitter:image" content="static/images/concept.jpg"> -->
-  <!-- <meta name="twitter:card" content="summary_large_image"> -->
-  <meta name="keywords" content="text-based place recognition, scene graph, OpenStreetMap">
+  <meta property="og:title" content="SPREAD: Scalable Pre-trained World Model for Adaptive Dynamics Model"/>
+  <meta property="og:description" content="Project page for SPREAD: Scalable Pre-trained World Model for Adaptive Dynamics Model"/>
+  <meta property="og:url" content="https://spread-wm.github.io/"/>
+  <meta name="twitter:title" content="SPREAD: Scalable Pre-trained World Model for Adaptive Dynamics Model">
+  <meta name="twitter:description" content="Project page for SPREAD: Scalable Pre-trained World Model for Adaptive Dynamics Model">
+  <meta name="keywords" content="world model, continual learning, online adaptation, LoRA, robotics, DINO-WM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>GOTPR: General Outdoor Text-based Place Recognition Using Scene Graph Retrieval with OpenStreetMap</title>
-  <link rel="icon" type="image/x-icon" href="static/images/magnifying_map.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,86 +29,101 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    .pdf-frame {
+      width: 100%;
+      min-height: 420px;
+      border: none;
+    }
+    .figure-caption {
+      margin-top: 0.75rem;
+      text-align: justify;
+    }
+    .section-divider {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .result-grid img,
+    .result-grid object {
+      width: 100%;
+      height: auto;
+    }
+    .custom-button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .env-grid .column {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .boxed-note {
+      background: #fafafa;
+      border-left: 4px solid #3273dc;
+      padding: 1rem 1.25rem;
+      border-radius: 6px;
+    }
+  </style>
 </head>
+
 <body>
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SPREAD: Scalable Pre-trained World Model <br> for Adaptive Dynamics Model</h1>
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">GOTPR: General Outdoor Text-based Place Recognition Using Scene Graph Retrieval with OpenStreetMap</h1>
-            <!-- <h2 class="title is-5 publlication-title">Submitted to </h2> -->
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block"><a href="https://donghwijung.github.io/" target="https://donghwijung.github.io/">Donghwi Jung</a>,</span>
-              <span class="author-block"><a href="https://www.notion.so/Keonwoo-Kim-743fdb8532e34542bca4172790183849?pvs=4" target="https://www.notion.so/Keonwoo-Kim-743fdb8532e34542bca4172790183849?pvs=4">Keonwoo Kim</a>,</span>
-              <span class="author-block"><a href="https://arisnu.squarespace.com/director" target="https://arisnu.squarespace.com/director">Seong-Woo Kim</a></span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <small>
-                  <br> Seoul National University
-                </small>
-              </span>
-            </div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- Paper abstract link -->
-                <span class="link-block">
-                  <a href="https://ieeexplore.ieee.org/document/10993325" target="https://ieeexplore.ieee.org/document/10993325"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                  </a>
-                </span>
-                <!-- Arxiv abstract link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2501.08575" target="https://arxiv.org/abs/2501.08575"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>Preprint</span>
-                  </a>
-                </span>
-                <!-- Github link -->
-                <span class="link-block">
-                  <a href="https://github.com/donghwijung/GOTPR" target="https://github.com/donghwijung/GOTPR"
-                  class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- Youtube link -->
-                <!-- <span class="link-block">
-                  <a href="https://youtu.be/59K14A1NqNw?si=-aKJ2l4cAAXT3K6L" target="https://youtu.be/59K14A1NqNw?si=-aKJ2l4cAAXT3K6L"
-                  class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-video"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span> -->
-            </div>
-
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
           </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">
+              <small><br>Anonymous Submission</small>
+            </span>
+          </div>
+
+          <div class="custom-button-row">
+            <span class="link-block">
+              <a href="paper.pdf" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>Preprint</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-quote-right"></i></span>
+                <span>BibTeX</span>
+              </a>
+            </span>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- Paper abstract -->
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -126,412 +131,325 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose GOTPR, a robust place recognition method designed for outdoor environments where GPS signals are unavailable. Unlike existing approaches that use point cloud maps, which are large and difficult to store, GOTPR leverages scene graphs generated from text descriptions and maps for place recognition. This method improves scalability by replacing point clouds with compact data structures, allowing robots to efficiently store and utilize extensive map data. Additionally, GOTPR eliminates the need for custom map creation by using publicly available OpenStreetMap data, which provides global spatial information. We evaluated its performance using the KITTI360Pose dataset with corresponding OpenStreetMap data, comparing it to existing point cloud-based place recognition methods. The results show that GOTPR achieves comparable ac- curacy while significantly reducing storage requirements. In city- scale tests, it completed processing within a few seconds, making it highly practical for real-world robotics applications.
+            Autonomous robots must be capable of adapting not only to training datasets but also to unfamiliar environments.
+            World models, which learn predictive dynamics of the environment, have been proposed to overcome the task-specific
+            limitations of conventional reinforcement learning. However, their capability is typically restricted to training
+            distributions. We introduce <b>SPREAD</b>, the first framework that enables a pre-trained world model to learn
+            environmental changes <b>online</b> and <b>continuously</b>. SPREAD freezes the pre-trained model and updates only
+            a set of LoRA adapters, jointly achieving real-time adaptation, robustness to forgetting without a replay buffer,
+            and forward transfer. Experiments show that SPREAD substantially reduces prediction loss under diverse visual and
+            dynamical changes, improves task success, and remains effective in continual learning settings. By extending
+            pre-trained world models to online continual learning, this work highlights a scalable path toward world models
+            that autonomously adapt to real-world dynamics.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
-<!-- Proposed Method Video -->
+<!-- Teaser Video -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/gotpr_video.mp4" type="video/mp4">
+      <video id="spread-video" autoplay controls muted loop playsinline width="100%">
+        <source src="static/videos/SPREAD.mp4" type="video/mp4">
       </video>
-      <!-- <div class="level-set has-text-justified">
+
+      <div class="level-set has-text-justified" style="margin-top:10px;">
         <p>
-          Voice narration is also provided. If you would like to watch the video with audio, please make sure to unmute it before viewing.
-        </p>
-      </div> -->
-    </div>
-  </div>
-</section>
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="tree" autoplay loop muted playsinline width="100%">
-        <source src="./static/videos/gotpr_video.mp4" type="video/mp4">
-      </video>
-      <div class="level-set has-text-justified">
-        <p>
-          Voice narration is also provided. If you would like to watch the video with audio, please make sure to unmute it before viewing.
+          <b>SPREAD:</b> Online continual adaptation of a pre-trained world model.
+          The system detects environmental changes, selects the most suitable expert,
+          and performs LoRA-based online adaptation while planning through the world model.
         </p>
       </div>
-    </div>
-  </div>
-</section> -->
-<!-- End teaser video -->
 
-<!-- <section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Concept</h2>
-          <center>
-            <img src="static/images/concept.jpg" class="center-image blend-img-background"/>
-          </center>
-          <div class="level-set has-text-justified">
-            <p>
-              Concept of GOTPR. The user describes the surrounding environment in text and provides it to the delivery robot. The robot interprets the text description to determine the user's scene. In this process, both the text description and the OSM data are converted into scene graphs. The robot then retrieves and identifies the most similar pair, estimating the current scene based on the highest similarity.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Related works</h2>
-          <center>
-            <img src="static/images/related_works.png" class="center-image blend-img-background" style="width:75%;"/>
-          </center>
-          <!-- <div class="level-set has-text-justified"> -->
-            <!-- <p>
-              Comparison with the previous text-based place recognition works
-            </p> -->
-          <!-- </div> -->
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <section class="section hero is-small">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Process</h2>
-          <center>
-            <img src="static/images/process.jpg" class="center-image blend-img-background"/>
-          </center>
-          <div class="level-set has-text-justified">
-            <p>
-              Process of GOTPR. The method consists of three sequential steps: 1) Scene graph generation, 2) Scene graph candidates extraction, 3) Scene graph retrieval and scene selection. The input data are a query text description and OSM. The output is the matching scene id.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <h2 class="title is-3">Scene graph generation</h2>
-        <div class="content">
-          <h2 class="title is-4">OSM scene graph generation</h2>
-          <center>
-            <img src="static/images/osm_map_scene_graph_generation_process.jpg" class="center-image blend-img-background"/>
-          </center>
-          <!-- <div class="level-set has-text-justified"> -->
-            <!-- <p>
-            </p> -->
-          <!-- </div> -->
-        </div>
-
-        <div class="content">
-          <h2 class="title is-4">Text scene graph generation</h2>
-          <center>
-            <img src="static/images/text_scene_graph_generation_process.jpg" class="center-image blend-img-background"/>
-          </center>
-          <!-- <div class="level-set has-text-justified"> -->
-            <!-- <p>
-            </p> -->
-          <!-- </div> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Scene graph retrieval network</h2>
-          <center>
-            <img src="static/images/scene_retrieval_network.jpg" class="center-image blend-img-background"/>
-          </center>
-          <div class="level-set has-text-justified">
-            <p>
-              Network of scene graph retrieval. Input of the process are query text scene graph and the extracted OSM scene graph candidates. And the output is the selected top-k scene id. The joint embedding model consists of multiple GPS convolution layers with self and cross modules.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Experiments</h2>
-          <div class="content">
-            <h2 class="title is-4">Experimental example</h2>
-            <center>
-              <img src="static/images/experimental_example.jpg" class="center-image blend-img-background"/>
-            </center>
-            <div class="level-set has-text-justified">
-              <p>
-                Examples of the experimental data are provided. The data were generated based on GPS coordinates 48.964117, 8.472481. (a) and (b) are presented to facilitate comparison and understanding rather than actual data used in GOTPR. In addition, The segmentations in (b) and (c) are included solely for visualization purposes to aid understanding. Moreover, the gray area in (f) represents the overlapping region with (e).
-              </p>
-            </div>
-          </div>
-
-          <div class="content">
-            <h2 class="title is-4">City-scale data generation (GPS sampling)</h2>
-            <center>
-              <img src="static/images/gps_sampling_toronto.png" class="center-image blend-img-background" style="width:80%"/>
-            </center>
-            <div class="level-set has-text-centered">
-              <p>
-                GPS samples collected in Toronto (<span style="color:blue">⬤</span>: Included GPS, <span style="color:red">⬤</span>: Excluded GPS)
-              </p>
-            </div>
-          </div>
-
-          <div class="content">
-            <h2 class="title is-4">A quantitative evaluation with baseline comparisons and ablation study</h2>
-            <center>
-              <img src="static/images/exp1_result.png" class="center-image blend-img-background"/>
-            </center>
-            <div class="level-set has-text-justified">
-            </div>
-          </div>
-
-          <div class="content">
-            <h2 class="title is-4">A quantitative evaluation for candidates extraction</h2>
-            <center>
-              <img src="static/images/exp2_result.png" class="center-image blend-img-background" style="width:50%;"/>
-            </center>
-            <!-- <div class="level-set has-text-justified"> -->
-              <!-- <p>
-                Examples of the experimental data are provided. The data were generated based on GPS coordinates 48.964117, 8.472481. (a) and (b) are presented to facilitate comparison and understanding rather than actual data used in GOTPR. In addition, The segmentations in (b) and (c) are included solely for visualization purposes to aid understanding. Moreover, the gray area in (f) represents the overlapping region with (e).
-              </p> -->
-            <!-- </div> -->
-          </div>
-
-          <div class="content">
-            <h2 class="title is-4">A quantitative evaluation for city-scale data</h2>
-            <center>
-              <img src="static/images/exp3_result.png" class="center-image blend-img-background" style="width:50%"/>
-            </center>
-            <!-- <div class="level-set has-text-justified"> -->
-              <!-- <p>
-                Examples of the experimental data are provided. The data were generated based on GPS coordinates 48.964117, 8.472481. (a) and (b) are presented to facilitate comparison and understanding rather than actual data used in GOTPR. In addition, The segmentations in (b) and (c) are included solely for visualization purposes to aid understanding. Moreover, the gray area in (f) represents the overlapping region with (e).
-              </p> -->
-            <!-- </div> -->
-          </div>
-
-          <div class="content">
-            <h2 class="title is-4">A quantitative evaluation of processing time for rule-based and transformer-based methods</h2>
-            <center>
-              <img src="static/images/processing_time.png" class="center-image blend-img-background" style="width:50%"/>
-            </center>
-            <!-- <div class="level-set has-text-justified"> -->
-              <!-- <p>
-                Examples of the experimental data are provided. The data were generated based on GPS coordinates 48.964117, 8.472481. (a) and (b) are presented to facilitate comparison and understanding rather than actual data used in GOTPR. In addition, The segmentations in (b) and (c) are included solely for visualization purposes to aid understanding. Moreover, the gray area in (f) represents the overlapping region with (e).
-              </p> -->
-            <!-- </div> -->
-          </div>
-
-          <div class="content">
-            <h2 class="title is-4">A quantitative evaluation of the map data size in point clouds and scene graphs</h2>
-            <center>
-              <img src="static/images/map_data_size.png" class="center-image blend-img-background" style="width:50%"/>
-            </center>
-            <!-- <div class="level-set has-text-justified"> -->
-              <!-- <p>
-                Examples of the experimental data are provided. The data were generated based on GPS coordinates 48.964117, 8.472481. (a) and (b) are presented to facilitate comparison and understanding rather than actual data used in GOTPR. In addition, The segmentations in (b) and (c) are included solely for visualization purposes to aid understanding. Moreover, the gray area in (f) represents the overlapping region with (e).
-              </p> -->
-            <!-- </div> -->
-          </div>
-
-          <!-- <div class="content">
-            <h2 class="title is-4">Qualitative results for GOTPR</h2>
-            <center>
-              <img src="static/images/map_data_size.png" class="center-image blend-img-background" style="width:50%"/>
-            </center>
-            <div class="level-set has-text-justified">
-              <p>
-                Examples of the experimental data are provided. The data were generated based on GPS coordinates 48.964117, 8.472481. (a) and (b) are presented to facilitate comparison and understanding rather than actual data used in GOTPR. In addition, The segmentations in (b) and (c) are included solely for visualization purposes to aid understanding. Moreover, the gray area in (f) represents the overlapping region with (e).
-              </p>
-            </div>
-          </div> -->
-
-        </div>
-      </div>
-      <!-- <h2 class="title is-3">
-        Qualitative results
-      </h2> -->
-    </div>
-    <h2 class="title is-4">Qualitative results</h2>
-    <div class="columns is-centered">
-      <div class="column is-two-fifths has-text-centered">
-        <figure class="image is-square">
-          <img src="static/images/text_description.jpg" alt="Image 1">
-        </figure>
-        <p class="subtitle is-6 mt-2">(a) Query text description.</p>
-      </div>
-      <div class="column is-two-fifths has-text-centered">
-        <figure class="image is-square">
-          <img src="static/images/query_text_graph.png" alt="Image 2">
-        </figure>
-        <p class="subtitle is-6 mt-2">(b) Query text scene graph.</p>
-      </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-two-fifths has-text-centered">
-        <figure class="image is-square">
-          <img src="static/images/top1_osm(gt).png" alt="Image 3">
-        </figure>
-        <p class="subtitle is-6 mt-2">(c) Top-1 OSM (G.T.).</p>
-      </div>
-      <div class="column is-two-fifths has-text-centered">
-        <figure class="image is-square">
-          <img src="static/images/top1_osm_graph(gt).png" alt="Image 4">
-        </figure>
-        <p class="subtitle is-6 mt-2">(d) Top-1 OSM scene graph (G.T.).</p>
-      </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-two-fifths has-text-centered">
-        <figure class="image is-square">
-          <img src="static/images/top3_osm.png" alt="Image 5">
-        </figure>
-        <p class="subtitle is-6 mt-2">(e) Top-3 OSM.</p>
-      </div>
-      <div class="column is-two-fifths has-text-centered">
-        <figure class="image is-square">
-          <img src="static/images/top3_osm_graph.png" alt="Image 6">
-        </figure>
-        <p class="subtitle is-6 mt-2">(f) Top-3 OSM scene graph.</p>
-      </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-two-fifths has-text-centered">
-        <figure class="image is-square">
-          <img src="static/images/top5_osm.png" alt="Image 7">
-        </figure>
-        <p class="subtitle is-6 mt-2">(g) Top-5 OSM. </p>
-      </div>
-      <div class="column is-two-fifths has-text-centered">
-        <figure class="image is-square">
-          <img src="static/images/top5_osm_graph.png" alt="Image 8">
-        </figure>
-        <p class="subtitle is-6 mt-2">(h) Top-5 OSM scene graph.</p>
-      </div>
-    </div>
-    <div class="level-set has-text-justified">
-      <p>
-        An example of place recognition results from GOTPR. The OSM scene graph that best matches the actual query text scene graph serves as the ground truth and corresponds to the Top-1 OSM scene graph with the highest similarity in the example above. The results were generated using the GPS coordinates 43.7594129828112,-79.46708294624517.
-        The suffixes <i>_n1,2</i> attached to some node labels in (a) are identifiers used to distinguish nodes with the same label. These identifiers are removed during the text scene graph generation process, resulting in the text scene graph shown in (b).
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Problem Scenario</h2>
+      <object class="pdf-frame" data="figs/scenario.pdf" type="application/pdf">
+        <img src="figs/scenario.png" alt="Problem scenario figure">
+      </object>
+      <p class="figure-caption">
+        <b>Problem scenario.</b> While a pre-trained world model exhibits strong performance within its training distribution,
+        it lacks the ability to adapt to visual and dynamical shifts that arise in unseen environments.
       </p>
     </div>
   </div>
 </section>
 
-<!-- Prompt session -->
-<section class="section">
+<section class="section hero is-small">
   <div class="container is-max-desktop">
-    <div class="row">
-      <h2 class="title is-3">
-        Experiments involving the user-generated text description
-      </h2>
-      <div class="content">
-        <h2 class="title is-4">Images presented to the tester</h2>
-        <center>
-          <img src="static/images/user_test_panoramic_streetview.jpg" class="center-image blend-img-background" style="width:100%"/>
-        </center>
-        <div class="level-set has-text-centered">
-          <p>
-            Street-view image (360 degree).
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Framework Overview</h2>
+      <object class="pdf-frame" data="figs/SPREAD_framework.pdf" type="application/pdf">
+        <img src="figs/SPREAD_framework.png" alt="SPREAD framework">
+      </object>
+      <p class="figure-caption">
+        <b>Framework of SPREAD.</b> The system interleaves expert evaluation, planning, and online adaptation.
+        During expert evaluation, the expert that best predicts the current task environment is selected from the
+        previously learned expert ensemble. Planning and online adaptation occur simultaneously using the selected expert,
+        and the adapted expert is subsequently added back into the expert ensemble for future evaluations.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="content">
+          <h2 class="title is-4 has-text-centered">Online-LoRA Ensemble</h2>
+          <object class="pdf-frame" data="figs/lora_ensemble.pdf" type="application/pdf">
+            <img src="figs/lora_ensemble.png" alt="Online-LoRA ensemble">
+          </object>
+          <p class="figure-caption">
+            <b>Online-LoRA ensemble.</b> Each ensemble member is formed by pairing the pre-trained model with stacked LoRA
+            adapters, and the collection of these PTM–LoRA pairs constitutes the full ensemble model.
           </p>
         </div>
       </div>
-      <div class="content">
-        <center>
-          <img src="static/images/user_test_osm.jpg" class="center-image blend-img-background" style="width:33%"/>
-        </center>
-        <div class="level-set has-text-centered">
-          <p>
-            OSM image (used for directional reference).
+
+      <div class="column is-half">
+        <div class="content">
+          <h2 class="title is-4 has-text-centered">Expert Selection</h2>
+          <object class="pdf-frame" data="figs/expert_selection.pdf" type="application/pdf">
+            <img src="figs/expert_selection.png" alt="Expert selection">
+          </object>
+          <p class="figure-caption">
+            <b>Ensemble evaluation and expert selection.</b> When a transition to a new task environment occurs,
+            the expert with the lowest prediction loss among all experts is selected. LoRA stacking is then applied
+            on top of the selected expert, followed by online adaptation.
           </p>
         </div>
       </div>
-      <p class="content has-text-justified">
-          <a href="static/prompts/user_instruction.txt">User intruction</a> |
-          <a href="static/prompts/user_text_description.txt">User-generated text description</a> |
-          <a href="static/prompts/prompt.txt">Prompt for LLM (user-generated text to GOTPR format)</a> |
-          <a href="static/prompts/llm_text_description.txt">LLM-generated text description</a>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Key Contributions</h2>
+      <div class="boxed-note">
+        <ul>
+          <li>First framework that extends a pre-trained world model to <b>online continual learning</b>.</li>
+          <li>Introduces the <b>Online-LoRA Ensemble</b> for replay-free continual adaptation.</li>
+          <li>Achieves strong <b>forward transfer</b> while mitigating <b>catastrophic forgetting</b>.</li>
+          <li>Demonstrates effectiveness in both <b>SoftGym Granular</b> and <b>PushT</b> environments.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Environment Variations</h2>
+
+      <div class="columns is-multiline is-centered env-grid">
+        <div class="column is-3 has-text-centered">
+          <img src="figs/default.png" alt="Pre-training environment">
+          <p class="subtitle is-6 mt-2">Granular: Pre-training Env</p>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="figs/table_color.png" alt="Table color">
+          <p class="subtitle is-6 mt-2">Granular: Table Color</p>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="figs/camera.png" alt="View angle">
+          <p class="subtitle is-6 mt-2">Granular: View Angle</p>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="figs/size.png" alt="Granular size">
+          <p class="subtitle is-6 mt-2">Granular: Granular Size</p>
+        </div>
+
+        <div class="column is-3 has-text-centered">
+          <img src="figs/pusht.png" alt="PushT pre-training environment">
+          <p class="subtitle is-6 mt-2">PushT: Pre-training Env</p>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="figs/framecolor.png" alt="Background color">
+          <p class="subtitle is-6 mt-2">PushT: Background Color</p>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="figs/blockcolor.png" alt="Block color">
+          <p class="subtitle is-6 mt-2">PushT: Block Color</p>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="figs/shape.png" alt="Block shape">
+          <p class="subtitle is-6 mt-2">PushT: Block Shape</p>
+        </div>
+      </div>
+
+      <p class="figure-caption">
+        <b>Variations in SoftGym Granular and PushT environments.</b>
+        Across experiments, we modify visual and physical factors such as table color, camera angle, granular size,
+        background color, block color, and block shape to evaluate adaptation under unseen conditions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Experimental Setup</h2>
+      <div class="content has-text-justified">
+        <p>
+          We initialize SPREAD with a pre-trained DINO-WM backbone and enable Online LoRA Stacking together with Ensemble
+          Expert Selection. Agents receive the initial observation and a goal image, and generate actions using a CEM-MPC
+          planner. Environment transitions are not manually specified; instead, SPREAD detects distributional shifts from
+          prediction-loss dynamics. During adaptation, only the most recent LoRA adapter is updated.
         </p>
-    </div>
-  </div>
-</section>
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+        <p>
+          In <b>PushT</b>, performance is measured by success rate. In <b>Granular</b>, performance is measured using
+          <b>Chamfer Distance (CD)</b>, which captures how closely the actual particle distribution matches the goal image.
+        </p>
       </div>
     </div>
   </div>
-</section> -->
-<!-- End youtube video -->
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>
-        @article{jung2025gotpr,
-          title={GOTPR: General Outdoor Text-based Place Recognition Using Scene Graph Retrieval with OpenStreetMap},
-          author={Jung, Donghwi and Kim, Keonwoo and Kim, Seong-Woo},
-          journal={IEEE Robotics and Automation Letters},
-          year={2025},
-          publisher={IEEE}
-        }
-      </code></pre>
-    </div>
 </section>
-<!--End BibTex citation -->
 
-<!-- <section class="section" id="Acknowledgements">
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Granular Chamfer Distance Examples</h2>
+      <div class="columns is-multiline is-centered">
+        <div class="column is-3 has-text-centered">
+          <img src="figs/default.png" alt="Image goal">
+          <p class="subtitle is-6 mt-2">Image Goal</p>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="figs/0.35.png" alt="CD 0.35">
+          <p class="subtitle is-6 mt-2">CD 0.35</p>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="figs/0.5.png" alt="CD 0.5">
+          <p class="subtitle is-6 mt-2">CD 0.5</p>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="figs/0.7.png" alt="CD 0.7">
+          <p class="subtitle is-6 mt-2">CD 0.7</p>
+        </div>
+      </div>
+      <p class="figure-caption">
+        <b>Distribution of granular particles for varying Chamfer Distance.</b>
+        Lower CD values indicate that the actual particle distribution more closely matches the image goal.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Online Adaptation Results</h2>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <object class="pdf-frame" data="figs/granular_cd_plot.pdf" type="application/pdf">
+            <img src="figs/granular_cd_plot.png" alt="Granular CD plot">
+          </object>
+          <p class="subtitle is-6 has-text-centered mt-2">Granular Environment Chamfer Distance</p>
+        </div>
+        <div class="column is-half">
+          <object class="pdf-frame" data="figs/pusht_success_plot.pdf" type="application/pdf">
+            <img src="figs/pusht_success_plot.png" alt="PushT success plot">
+          </object>
+          <p class="subtitle is-6 has-text-centered mt-2">PushT Environment Success Rate</p>
+        </div>
+      </div>
+      <p class="figure-caption">
+        <b>Online adaptation performance in Granular and PushT environments.</b>
+        As LoRA updates proceed, SPREAD recovers performance in unseen environments.
+        In PushT, the agent rapidly restores success under distribution shifts, while in Granular the Chamfer Distance
+        decreases substantially after online adaptation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Main Findings</h2>
+      <div class="content has-text-justified">
+        <p>
+          In unseen Granular environments, SPREAD reduces both prediction loss and Chamfer Distance after only a short
+          online adaptation period, recovering a large fraction of the degradation caused by visual and physical shifts.
+        </p>
+        <p>
+          In PushT, the method restores task success that otherwise collapses under background or object variations.
+          This shows that reductions in latent prediction error translate directly into improved downstream planning performance.
+        </p>
+        <p>
+          Under continual adaptation, SPREAD maintains low forgetting comparable to replay-based methods while preserving
+          fast update speed and negligible storage growth. It also achieves the strongest forward transfer, indicating that
+          previously learned experts provide an effective initialization for newly encountered environments.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Ablation Study</h2>
+      <div class="content has-text-justified">
+        <p>
+          We ablate two core components: <b>loss-plateau freezing</b> and <b>expert selection</b>.
+          Plateau-based freezing stabilizes adaptation and helps prevent over-specialization, while expert selection
+          reduces forgetting by reusing the dynamics expert whose latent predictions best match the current transition.
+        </p>
+        <p>
+          The full SPREAD model, combining both components, achieves the best overall balance between forward transfer
+          and forgetting, supporting the claim that these mechanisms are complementary.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">Conclusion</h2>
+      <div class="content has-text-justified">
+        <p>
+          SPREAD extends pre-trained world models to the online continual learning regime. It consistently reduces visual
+          prediction error in unseen environments, improves task performance, mitigates catastrophic forgetting without replay,
+          and enhances forward transfer by selecting experts whose dynamics align with newly encountered environments.
+        </p>
+        <p>
+          The current evaluation is conducted in simulation and assumes image-based goals inherited from DINO-WM. Future work
+          includes real-robot deployment, integration with policy learning, and more principled methods for managing and pruning
+          large expert ensembles.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">Acknowledgements</h2>
-  This research was funded by the Korean Ministry of Land, Infrastructure and Transport (MOLIT) through the Smart City Innovative Talent Education Program and by the Korea Institute for Advancement of Technology (KIAT) under a MOTIE grant (P0020536). Additional support came from the Ministry of Education (MOE) and the National Research Foundation of Korea (NRF). K. Kim, D. Jung, and the corresponding author are affiliated with the Smart City Global Convergence program. Research facilities were provided by the Institute of Engineering Research at Seoul National University.  </div>
-</section> -->
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
+    <h2 class="title">BibTeX</h2>
+<pre><code>@article{anonymous2026spread,
+  title={SPREAD: Scalable Pre-trained World Model for Adaptive Dynamics Model},
+  author={Anonymous Authors},
+  journal={Under Review},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
 
 </body>
 </html>

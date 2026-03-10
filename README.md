@@ -1,1 +1,1 @@
-# donghwijung.github.io/GOTPR_page/
+# spread-wm.github.io/spread/
