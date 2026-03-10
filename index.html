@@ -13,7 +13,7 @@
   <meta name="keywords" content="world model, continual learning, online adaptation, LoRA, robotics, DINO-WM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/figs/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -31,24 +31,17 @@
   <script src="static/js/index.js"></script>
 
   <style>
-    .pdf-frame {
-      width: 100%;
-      min-height: 420px;
-      border: none;
+    .publication-title-custom {
+      font-size: 2.6rem !important;
+      line-height: 1.15;
     }
+
     .figure-caption {
-      margin-top: 0.75rem;
-      text-align: justify;
+      margin-top: 0.65rem;
+      text-align: center;
+      font-size: 0.98rem;
     }
-    .section-divider {
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .result-grid img,
-    .result-grid object {
-      width: 100%;
-      height: auto;
-    }
+
     .custom-button-row {
       display: flex;
       flex-wrap: wrap;
@@ -56,15 +49,53 @@
       justify-content: center;
       margin-top: 1rem;
     }
+
     .env-grid .column {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
     }
-    .boxed-note {
-      background: #fafafa;
-      border-left: 4px solid #3273dc;
-      padding: 1rem 1.25rem;
-      border-radius: 6px;
+
+    .section-compact {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .section-very-compact {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .main-figure {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .medium-figure {
+      width: 92%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .table-figure {
+      width: 88%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 4px;
+    }
+
+    .small-note {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .section-title-tight {
+      margin-bottom: 1rem !important;
     }
   </style>
 </head>
@@ -76,7 +107,9 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">SPREAD: Scalable Pre-trained World Model <br> for Adaptive Dynamics Model</h1>
+          <h1 class="title publication-title publication-title-custom">
+            SPREAD: Scalable Pre-trained World Model <br> for Adaptive Dynamics Model
+          </h1>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">Anonymous Authors</span>
@@ -124,11 +157,23 @@
   </div>
 </section>
 
-<section class="section hero">
+<!-- Teaser Video -->
+<section class="hero teaser section-very-compact">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="spread-video" autoplay controls muted loop playsinline width="100%">
+        <source src="static/videos/SPREAD.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section hero section-compact">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3 section-title-tight">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Autonomous robots must be capable of adapting not only to training datasets but also to unfamiliar environments.
@@ -148,293 +193,178 @@
   </div>
 </section>
 
-<!-- Teaser Video -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="spread-video" autoplay controls muted loop playsinline width="100%">
-        <source src="static/videos/SPREAD.mp4" type="video/mp4">
-      </video>
-
-      <div class="level-set has-text-justified" style="margin-top:10px;">
-        <p>
-          <b>SPREAD:</b> Online continual adaptation of a pre-trained world model.
-          The system detects environmental changes, selects the most suitable expert,
-          and performs LoRA-based online adaptation while planning through the world model.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
+<!-- Problem Scenario -->
+<section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered">Problem Scenario</h2>
-      <object class="pdf-frame" data="static/figs/scenario.pdf" type="application/pdf">
-        <img src="static/figs/scenario.png" alt="Problem scenario figure">
-      </object>
-      <p class="figure-caption">
-        <b>Problem scenario.</b> While a pre-trained world model exhibits strong performance within its training distribution,
-        it lacks the ability to adapt to visual and dynamical shifts that arise in unseen environments.
-      </p>
+      <h2 class="title is-3 has-text-centered section-title-tight">Problem Scenario</h2>
+      <img src="static/figs/scenario.png" alt="Problem scenario figure" class="main-figure">
     </div>
   </div>
 </section>
 
-<section class="section hero is-small">
+<!-- Related Works Table -->
+<section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered">Framework Overview</h2>
-      <object class="pdf-frame" data="static/figs/SPREAD_framework.pdf" type="application/pdf">
-        <img src="static/figs/SPREAD_framework.png" alt="SPREAD framework">
-      </object>
-      <p class="figure-caption">
-        <b>Framework of SPREAD.</b> The system interleaves expert evaluation, planning, and online adaptation.
-        During expert evaluation, the expert that best predicts the current task environment is selected from the
-        previously learned expert ensemble. Planning and online adaptation occur simultaneously using the selected expert,
-        and the adapted expert is subsequently added back into the expert ensemble for future evaluations.
-      </p>
+      <h2 class="title is-3 has-text-centered section-title-tight">Related Works</h2>
+      <img src="static/figs/table1.png" alt="Related works table" class="table-figure">
+      <p class="figure-caption">Comparison of world model OCL approaches.</p>
     </div>
   </div>
 </section>
 
-<section class="section hero is-small">
+<!-- Framework -->
+<section class="section hero is-small section-compact">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered section-title-tight">Framework Overview</h2>
+      <img src="static/figs/SPREAD_framework.png" alt="SPREAD framework" class="main-figure">
+    </div>
+  </div>
+</section>
+
+<!-- Ensemble + Expert Selection -->
+<section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-half">
         <div class="content">
-          <h2 class="title is-4 has-text-centered">Online-LoRA Ensemble</h2>
-          <object class="pdf-frame" data="static/figs/lora_ensemble.pdf" type="application/pdf">
-            <img src="static/figs/lora_ensemble.png" alt="Online-LoRA ensemble">
-          </object>
-          <p class="figure-caption">
-            <b>Online-LoRA ensemble.</b> Each ensemble member is formed by pairing the pre-trained model with stacked LoRA
-            adapters, and the collection of these PTM–LoRA pairs constitutes the full ensemble model.
-          </p>
+          <h2 class="title is-4 has-text-centered section-title-tight">Online-LoRA Ensemble</h2>
+          <img src="static/figs/lora_ensemble.png" alt="Online-LoRA ensemble" class="main-figure">
         </div>
       </div>
 
       <div class="column is-half">
         <div class="content">
-          <h2 class="title is-4 has-text-centered">Expert Selection</h2>
-          <object class="pdf-frame" data="static/figs/expert_selection.pdf" type="application/pdf">
-            <img src="static/figs/expert_selection.png" alt="Expert selection">
-          </object>
-          <p class="figure-caption">
-            <b>Ensemble evaluation and expert selection.</b> When a transition to a new task environment occurs,
-            the expert with the lowest prediction loss among all experts is selected. LoRA stacking is then applied
-            on top of the selected expert, followed by online adaptation.
-          </p>
+          <h2 class="title is-4 has-text-centered section-title-tight">Expert Selection</h2>
+          <img src="static/figs/expert_selection.png" alt="Expert selection" class="main-figure">
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section hero">
+<!-- Environment Variations -->
+<section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered">Key Contributions</h2>
-      <div class="boxed-note">
-        <ul>
-          <li>First framework that extends a pre-trained world model to <b>online continual learning</b>.</li>
-          <li>Introduces the <b>Online-LoRA Ensemble</b> for replay-free continual adaptation.</li>
-          <li>Achieves strong <b>forward transfer</b> while mitigating <b>catastrophic forgetting</b>.</li>
-          <li>Demonstrates effectiveness in both <b>SoftGym Granular</b> and <b>PushT</b> environments.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="content">
-      <h2 class="title is-3 has-text-centered">Environment Variations</h2>
+      <h2 class="title is-3 has-text-centered section-title-tight">Environment Variations</h2>
 
       <div class="columns is-multiline is-centered env-grid">
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/default.png" alt="Pre-training environment">
+          <img src="static/figs/default.png" alt="Pre-training environment" class="main-figure">
           <p class="subtitle is-6 mt-2">Granular: Pre-training Env</p>
         </div>
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/table_color.png" alt="Table color">
+          <img src="static/figs/table_color.png" alt="Table color" class="main-figure">
           <p class="subtitle is-6 mt-2">Granular: Table Color</p>
         </div>
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/camera.png" alt="View angle">
+          <img src="static/figs/camera.png" alt="View angle" class="main-figure">
           <p class="subtitle is-6 mt-2">Granular: View Angle</p>
         </div>
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/size.png" alt="Granular size">
+          <img src="static/figs/size.png" alt="Granular size" class="main-figure">
           <p class="subtitle is-6 mt-2">Granular: Granular Size</p>
         </div>
 
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/pusht.png" alt="PushT pre-training environment">
+          <img src="static/figs/pusht.png" alt="PushT pre-training environment" class="main-figure">
           <p class="subtitle is-6 mt-2">PushT: Pre-training Env</p>
         </div>
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/framecolor.png" alt="Background color">
+          <img src="static/figs/framecolor.png" alt="Background color" class="main-figure">
           <p class="subtitle is-6 mt-2">PushT: Background Color</p>
         </div>
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/blockcolor.png" alt="Block color">
+          <img src="static/figs/blockcolor.png" alt="Block color" class="main-figure">
           <p class="subtitle is-6 mt-2">PushT: Block Color</p>
         </div>
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/shape.png" alt="Block shape">
+          <img src="static/figs/shape.png" alt="Block shape" class="main-figure">
           <p class="subtitle is-6 mt-2">PushT: Block Shape</p>
         </div>
       </div>
-
-      <p class="figure-caption">
-        <b>Variations in SoftGym Granular and PushT environments.</b>
-        Across experiments, we modify visual and physical factors such as table color, camera angle, granular size,
-        background color, block color, and block shape to evaluate adaptation under unseen conditions.
-      </p>
     </div>
   </div>
 </section>
 
-<section class="section hero is-small">
+<!-- CD Examples -->
+<section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered">Experimental Setup</h2>
-      <div class="content has-text-justified">
-        <p>
-          We initialize SPREAD with a pre-trained DINO-WM backbone and enable Online LoRA Stacking together with Ensemble
-          Expert Selection. Agents receive the initial observation and a goal image, and generate actions using a CEM-MPC
-          planner. Environment transitions are not manually specified; instead, SPREAD detects distributional shifts from
-          prediction-loss dynamics. During adaptation, only the most recent LoRA adapter is updated.
-        </p>
-        <p>
-          In <b>PushT</b>, performance is measured by success rate. In <b>Granular</b>, performance is measured using
-          <b>Chamfer Distance (CD)</b>, which captures how closely the actual particle distribution matches the goal image.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="content">
-      <h2 class="title is-3 has-text-centered">Granular Chamfer Distance Examples</h2>
+      <h2 class="title is-3 has-text-centered section-title-tight">Granular Chamfer Distance Examples</h2>
       <div class="columns is-multiline is-centered">
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/default.png" alt="Image goal">
+          <img src="static/figs/default.png" alt="Image goal" class="main-figure">
           <p class="subtitle is-6 mt-2">Image Goal</p>
         </div>
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/0.35.png" alt="CD 0.35">
+          <img src="static/figs/0.35.png" alt="CD 0.35" class="main-figure">
           <p class="subtitle is-6 mt-2">CD 0.35</p>
         </div>
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/0.5.png" alt="CD 0.5">
+          <img src="static/figs/0.5.png" alt="CD 0.5" class="main-figure">
           <p class="subtitle is-6 mt-2">CD 0.5</p>
         </div>
         <div class="column is-3 has-text-centered">
-          <img src="static/figs/0.7.png" alt="CD 0.7">
+          <img src="static/figs/0.7.png" alt="CD 0.7" class="main-figure">
           <p class="subtitle is-6 mt-2">CD 0.7</p>
         </div>
       </div>
-      <p class="figure-caption">
-        <b>Distribution of granular particles for varying Chamfer Distance.</b>
-        Lower CD values indicate that the actual particle distribution more closely matches the image goal.
-      </p>
     </div>
   </div>
 </section>
 
-<section class="section hero is-small">
+<!-- Online Adaptation Results -->
+<section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered">Online Adaptation Results</h2>
+      <h2 class="title is-3 has-text-centered section-title-tight">Online Adaptation Results</h2>
       <div class="columns is-centered">
         <div class="column is-half">
-          <object class="pdf-frame" data="static/figs/granular_cd_plot.pdf" type="application/pdf">
-            <img src="static/figs/granular_cd_plot.png" alt="Granular CD plot">
-          </object>
-          <p class="subtitle is-6 has-text-centered mt-2">Granular Environment Chamfer Distance</p>
+          <img src="static/figs/granular_cd_plot.png" alt="Granular CD plot" class="main-figure">
+          <p class="small-note">Granular Environment Chamfer Distance</p>
         </div>
         <div class="column is-half">
-          <object class="pdf-frame" data="static/figs/pusht_success_plot.pdf" type="application/pdf">
-            <img src="static/figs/pusht_success_plot.png" alt="PushT success plot">
-          </object>
-          <p class="subtitle is-6 has-text-centered mt-2">PushT Environment Success Rate</p>
+          <img src="static/figs/pusht_success_plot.png" alt="PushT success plot" class="main-figure">
+          <p class="small-note">PushT Environment Success Rate</p>
         </div>
       </div>
-      <p class="figure-caption">
-        <b>Online adaptation performance in Granular and PushT environments.</b>
-        As LoRA updates proceed, SPREAD recovers performance in unseen environments.
-        In PushT, the agent rapidly restores success under distribution shifts, while in Granular the Chamfer Distance
-        decreases substantially after online adaptation.
-      </p>
     </div>
   </div>
 </section>
 
-<section class="section hero">
+<!-- Online Adaptation Table -->
+<section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered">Main Findings</h2>
-      <div class="content has-text-justified">
-        <p>
-          In unseen Granular environments, SPREAD reduces both prediction loss and Chamfer Distance after only a short
-          online adaptation period, recovering a large fraction of the degradation caused by visual and physical shifts.
-        </p>
-        <p>
-          In PushT, the method restores task success that otherwise collapses under background or object variations.
-          This shows that reductions in latent prediction error translate directly into improved downstream planning performance.
-        </p>
-        <p>
-          Under continual adaptation, SPREAD maintains low forgetting comparable to replay-based methods while preserving
-          fast update speed and negligible storage growth. It also achieves the strongest forward transfer, indicating that
-          previously learned experts provide an effective initialization for newly encountered environments.
-        </p>
-      </div>
+      <h2 class="title is-3 has-text-centered section-title-tight">Online Adaptation Performance</h2>
+      <img src="static/figs/table2.png" alt="Online adaptation performance table" class="table-figure">
+      <p class="figure-caption">Performance under granular environment shifts.</p>
     </div>
   </div>
 </section>
 
-<section class="section hero">
+<!-- Online Continual Adaptation Table -->
+<section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered">Ablation Study</h2>
-      <div class="content has-text-justified">
-        <p>
-          We ablate two core components: <b>loss-plateau freezing</b> and <b>expert selection</b>.
-          Plateau-based freezing stabilizes adaptation and helps prevent over-specialization, while expert selection
-          reduces forgetting by reusing the dynamics expert whose latent predictions best match the current transition.
-        </p>
-        <p>
-          The full SPREAD model, combining both components, achieves the best overall balance between forward transfer
-          and forgetting, supporting the claim that these mechanisms are complementary.
-        </p>
-      </div>
+      <h2 class="title is-3 has-text-centered section-title-tight">Online Continual Adaptation Performance</h2>
+      <img src="static/figs/table3.png" alt="Online continual adaptation performance table" class="table-figure">
+      <p class="figure-caption">Continual adaptation performance and online feasibility.</p>
     </div>
   </div>
 </section>
 
-<section class="section hero">
+<!-- Ablation Table -->
+<section class="section hero is-small section-compact">
   <div class="container is-max-desktop">
     <div class="content">
-      <h2 class="title is-3 has-text-centered">Conclusion</h2>
-      <div class="content has-text-justified">
-        <p>
-          SPREAD extends pre-trained world models to the online continual learning regime. It consistently reduces visual
-          prediction error in unseen environments, improves task performance, mitigates catastrophic forgetting without replay,
-          and enhances forward transfer by selecting experts whose dynamics align with newly encountered environments.
-        </p>
-        <p>
-          The current evaluation is conducted in simulation and assumes image-based goals inherited from DINO-WM. Future work
-          includes real-robot deployment, integration with policy learning, and more principled methods for managing and pruning
-          large expert ensembles.
-        </p>
-      </div>
+      <h2 class="title is-3 has-text-centered section-title-tight">Ablation Study</h2>
+      <img src="static/figs/table4.png" alt="Ablation study table" class="table-figure">
+      <p class="figure-caption">Ablation on loss-plateau freezing and expert selection.</p>
     </div>
   </div>
 </section>
